@@ -1,6 +1,17 @@
 {
   "name": "mnadeaufbo/mapcoordinates",
+  "type": "library",
+  "homepage": "https://github.com/mnadeaufbo/mapcoordinates",
   "description": "Une petite librairie qui me permet de calculer si un segment est sécant avec un autre, et par extension des polygones",
+  "license": "MIT",
+    "authors": [
+      {
+        "name": "Mathieu NADEAU",
+        "email": "mnadeau@groupefbo.com",
+        "homepage": "https://www.groupefbo.com",
+        "role": "Developer"
+      }
+    ],
   "require": {
       "php": ">=7.4"
   },
