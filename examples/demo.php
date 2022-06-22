@@ -1,8 +1,8 @@
 <?php
 
-use MapCoordinates\Map\Point;
-use MapCoordinates\Map\Polygone;
-use MapCoordinates\Map\Segment;
+use Sidunis\MapCoordinates\Point;
+use Sidunis\MapCoordinates\Polygone;
+use Sidunis\MapCoordinates\Segment;
 
 require_once '../class/Point.php';
 require_once '../class/Segment.php';

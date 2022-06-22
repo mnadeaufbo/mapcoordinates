@@ -1,6 +1,6 @@
 <?php
 
-namespace MapCoordinates\Map;
+namespace Sidunis\MapCoordinates;
 
 class Segment
 {
