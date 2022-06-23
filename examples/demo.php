@@ -4,9 +4,11 @@ use Sidunis\MapCoordinates\Point;
 use Sidunis\MapCoordinates\Polygone;
 use Sidunis\MapCoordinates\Segment;
 
-require_once '../class/Point.php';
-require_once '../class/Segment.php';
-require_once '../class/Polygone.php';
+$autoloadPath = realpath(__DIR__ . '/../../vendor/autoload.php');
+if (!$autoloadPath OR !file_exists($autoloadPath)) {
+  throw new Exception('You must run "composer install" in order to use this library.');
+}
+require_once $autoloadPath;
 
 $poly1 = new Polygone([
   Point::gm(46.69488180413321, -1.451045828610618), 
@@ -28,8 +30,10 @@ $poly3 = new Polygone([
 
 $segment = new Segment(Point::gm(46.68856861790532, -1.4589775899554707),Point::gm(46.707594274746306, -1.4509381303205058));
 ?>
-<ul>
-  <li>Le polygone 1 <?php $poly1->isSecantWithSegment($segment) ? "est" : "n'est pas" ?> sécant avec notre segment</li>
-  <li>Le polygone 2 <?php $poly2->isSecantWithSegment($segment) ? "est" : "n'est pas" ?> sécant avec notre segment</li>
-  <li>Le polygone 3 <?php $poly3->isSecantWithSegment($segment) ? "est" : "n'est pas" ?> sécant avec notre segment</li>
-</ul>
+<body>
+  <ul>
+    <li>Le polygone 1 <?php $poly1->isSecantWithSegment($segment) ? "est" : "n'est pas" ?> sécant avec notre segment</li>
+    <li>Le polygone 2 <?php $poly2->isSecantWithSegment($segment) ? "est" : "n'est pas" ?> sécant avec notre segment</li>
+    <li>Le polygone 3 <?php $poly3->isSecantWithSegment($segment) ? "est" : "n'est pas" ?> sécant avec notre segment</li>
+  </ul>
+</body>
